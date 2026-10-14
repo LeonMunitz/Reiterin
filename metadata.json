@@ -1,0 +1,6 @@
+{
+  "name": "Roblox Tower Obby - Prácticas del Lenguaje",
+  "description": "Juego de plataformas estilo Roblox Obby para aprender sustantivos, adjetivos, sinónimos y antónimos con doble salto y portales interactivos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

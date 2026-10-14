@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Quicksand', 'Plus Jakarta Sans', sans-serif;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    overscroll-behavior: none;
+    background-color: #030712;
+  }
+}
+
+.title-font {
+  font-family: 'Fredoka', cursive, sans-serif;
+}
+
+.font-quicksand {
+  font-family: 'Quicksand', sans-serif;
+}
+
+canvas {
+  display: block;
+  image-rendering: auto;
+}
+
+.game-button {
+  transition: transform 0.08s ease, filter 0.08s ease, box-shadow 0.08s ease;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.game-button:active,
+.game-button.is-pressed {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.btn-pulse {
+  animation: pulseSoft 1.5s ease-in-out infinite;
+}
+
+@keyframes guideArrowPulse {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 6px rgba(250, 204, 21, 0.8));
+  }
+  50% {
+    transform: translateY(-4px);
+    filter: drop-shadow(0 0 12px rgba(250, 204, 21, 1));
+  }
+}
+
+.guide-beacon {
+  animation: guideArrowPulse 1s ease-in-out infinite;
+}
+
+/* Custom scrollbars for modals */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(234, 179, 8, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(234, 179, 8, 0.7);
+}
